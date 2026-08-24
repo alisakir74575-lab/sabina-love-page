@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>For Sabina ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      font-family: Arial, sans-serif;
+      background: #09050a;
+      color: white;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .background {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(
+          circle at 20% 20%,
+          #4a1230 0,
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at 80% 80%,
+          #24104a 0,
+          transparent 35%
+        ),
+        #09050a;
+    }
+
+    /* Floating hearts */
+    .hearts span {
+      position: fixed;
+      bottom: -50px;
+      font-size: 22px;
+      opacity: 0.7;
+      animation: floatHeart 9s linear infinite;
+      z-index: -1;
+    }
+
+    .hearts span:nth-child(1) {
+      left: 8%;
+      animation-delay: 0s;
+    }
+
+    .hearts span:nth-child(2) {
+      left: 25%;
+      animation-delay: 2s;
+    }
+
+    .hearts span:nth-child(3) {
+      left: 45%;
+      animation-delay: 4s;
+    }
+
+    .hearts span:nth-child(4) {
+      left: 68%;
+      animation-delay: 1s;
+    }
+
+    .hearts span:nth-child(5) {
+      left: 88%;
+      animation-delay: 3s;
+    }
+
+    @keyframes floatHeart {
+      from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.7;
+      }
+
+      to {
+        transform: translateY(-115vh) rotate(30deg);
+        opacity: 0;
+      }
+    }
+
+    /* Hero section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .small-title {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      opacity: 0.75;
+    }
+
+    h1 {
+      font-size: clamp(45px, 13vw, 85px);
+      margin: 10px 0;
+      line-height: 1;
+    }
+
+    .subtitle {
+      max-width: 600px;
+      font-size: 18px;
+      line-height: 1.7;
+      opacity: 0.9;
+    }
+
+    /* Buttons */
+    .buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      border: none;
+      border-radius: 50px;
+      padding: 14px 22px;
+      margin: 6px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      background: white;
+      color: #1a0712;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .love-button {
+      background: #ff5c9a;
+      color: white;
+    }
+
+    button:active {
+      transform: scale(0.96);
+    }
+
+    /* Secret message */
+    .secret {
+      display: none;
+      margin-top: 25px;
+      font-size: 20px;
+      line-height: 1.8;
+      max-width: 600px;
+    }
+
+    .secret.show {
+      display: block;
+      animation: showMessage 0.6s ease;
+    }
+
+    @keyframes showMessage {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Gallery */
+    .gallery-section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 18px 70px;
+    }
+
+    .memory-box {
+      text-align: center;
+      padding: 25px;
+      border-radius: 25px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      line-height: 1.7;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(180px, 1fr)
+      );
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .photo {
+      aspect-ratio: 3 / 4;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #180b14;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s;
+    }
+
+    .photo img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 10px 40px;
+      opacity: 0.55;
+      font-size: 12px;
+    }
+
+    /* Music status */
+    #musicStatus {
+      margin-top: 8px;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="background"></div>
+
+  <!-- Floating hearts -->
+  <div class="hearts">
+    <span>❤️</span>
+    <span>💗</span>
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💕</span>
+  </div>
+
+
+  <!-- Main section -->
+  <section class="hero">
+
+    <div class="small-title">
+      A little surprise made with love
+    </div>
+
+    <h1>
+      For Sabina ❤️
+    </h1>
+
+    <div class="subtitle">
+      Every moment with you is a beautiful memory.
+      <br>
+      Some people make ordinary days feel special.
+    </div>
+
+    <div class="buttons">
+
+      <button
+        class="love-button"
+        onclick="showLove()">
+        Open My Heart ❤️
+      </button>
+
+      <button
+        onclick="toggleMusic()"
+        id="musicButton">
+        ♫ Play Music
+      </button>
+
+    </div>
+
+    <div id="musicStatus">
+      Tap Play Music for a soft instrumental melody 🎵
+    </div>
+
+
+    <!-- Hidden message -->
+    <div
+      id="secretMessage"
+      class="secret">
+
+      Sabina, you are my favourite person. ❤️
+
+      <br>
+
+      I hope this little surprise
+      brings a smile to your face.
+
+      <br>
+
+      <strong>
+        Forever & Always ❤️
+      </strong>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Photo section -->
+  <section class="gallery-section">
+
+    <div class="memory-box">
+
+      <strong>
+        Our Little Memories ✨
+      </strong>
+
+      <br>
+
+      Scroll slowly...
+      every photo holds a moment worth keeping. ❤️
+
+    </div>
+
+
+    <div class="gallery">
+
+      <!-- PHOTO 1 -->
+      <div class="photo">
+        <img src="photo1.jpg" alt="Memory 1">
+      </div>
+
+      <!-- PHOTO 2 -->
+      <div class="photo">
+        <img src="photo2.jpg" alt="Memory 2">
+      </div>
+
+      <!-- PHOTO 3 -->
+      <div class="photo">
+        <img src="photo3.jpg" alt="Memory 3">
+      </div>
+
+      <!-- PHOTO 4 -->
+      <div class="photo">
+        <img src="photo4.jpg" alt="Memory 4">
+      </div>
+
+      <!-- PHOTO 5 -->
+      <div class="photo">
+        <img src="photo5.jpg" alt="Memory 5">
+      </div>
+
+      <!-- PHOTO 6 -->
+      <div class="photo">
+        <img src="photo6.jpg" alt="Memory 6">
+      </div>
+
+      <!-- PHOTO 7 -->
+      <div class="photo">
+        <img src="photo7.jpg" alt="Memory 7">
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <footer>
+    Made specially for Sabina ❤️
+  </footer>
+
+
+
+  <script>
+
+    /* =========================
+       LOVE MESSAGE
+    ========================== */
+
+    function showLove() {
+
+      const message =
+        document.getElementById("secretMessage");
+
+      message.classList.toggle("show");
+
+    }
+
+
+
+    /* =========================
+       SIMPLE BACKGROUND MUSIC
+    ========================== */
+
+    let audioContext = null;
+    let masterGain = null;
+    let musicTimer = null;
+    let musicPlaying = false;
+
+
+    function startMusic() {
+
+      if (musicPlaying) {
+        return;
+      }
+
+      const AudioContext =
+        window.AudioContext ||
+        window.webkitAudioContext;
+
+      audioContext = new AudioContext();
+
+      masterGain =
+        audioContext.createGain();
+
+      masterGain.gain.value = 0.05;
+
+      masterGain.connect(
+        audioContext.destination
+      );
+
+
+      const notes = [
+        261.63,
+        329.63,
+        392.00,
+        329.63,
+        293.66,
+        349.23,
+        440.00,
+        349.23
+      ];
+
+
+      let noteIndex = 0;
+
+
+      musicTimer = setInterval(function () {
+
+        const oscillator =
+          audioContext.createOscillator();
+
+        const gain =
+          audioContext.createGain();
+
+
+        oscillator.type = "sine";
+
+        oscillator.frequency.value =
+          notes[
+            noteIndex % notes.length
+          ];
+
+        noteIndex++;
+
+
+        gain.gain.setValueAtTime(
+          0,
+          audioContext.currentTime
+        );
+
+
+        gain.gain.linearRampToValueAtTime(
+          0.35,
+          audioContext.currentTime + 0.04
+        );
+
+
+        gain.gain.exponentialRampToValueAtTime(
+          0.001,
+          audioContext.currentTime + 0.8
+        );
+
+
+        oscillator.connect(gain);
+
+        gain.connect(masterGain);
+
+
+        oscillator.start();
+
+        oscillator.stop(
+          audioContext.currentTime + 0.85
+        );
+
+      }, 500);
+
+
+      musicPlaying = true;
+
+      document.getElementById(
+        "musicButton"
+      ).innerText =
+        "♫ Pause Music";
+
+    }
+
+
+
+    function stopMusic() {
+
+      if (!musicPlaying) {
+        return;
+      }
+
+
+      clearInterval(musicTimer);
+
+      musicTimer = null;
+
+
+      if (audioContext) {
+        audioContext.close();
+      }
+
+
+      audioContext = null;
+
+      musicPlaying = false;
+
+
+      document.getElementById(
+        "musicButton"
+      ).innerText =
+        "♫ Play Music";
+
+    }
+
+
+
+    function toggleMusic() {
+
+      if (musicPlaying) {
+
+        stopMusic();
+
+      } else {
+
+        startMusic();
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
